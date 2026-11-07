@@ -60,9 +60,6 @@ preload.js        Safe bridge between the window and the app
 assets/           Images used by the app
 ```
 
-## Credits
-
-This project is built on the foundation of **GreenProductive** by Joanne Andriamahandry ([Btelgeuse](https://github.com/Btelgeuse)), originally a plain green to-do list app: <https://github.com/Btelgeuse/GreenProductive>. The original is licensed under ISC. The Demon Slayer theme, saved tasks, categories, priorities and new title design were added in this version.
 
 ## Disclaimer
 
