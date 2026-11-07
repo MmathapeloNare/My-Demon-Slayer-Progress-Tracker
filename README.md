@@ -4,7 +4,6 @@ A Demon Slayer themed to-do list for your desktop. Plan your day's missions, tag
 
 The look is inspired by Tanjiro's green and black checkered haori, with Nezuko pink as the accent colour.
 
-> **Screenshots:** add your own screenshots here, for example `docs/home.png` and `docs/dashboard.png`.
 
 ## Features
 
@@ -36,31 +35,3 @@ You need [Node.js](https://nodejs.org/) installed.
    ```
    npm start
    ```
-
-An internet connection is needed for the fonts and icons, which load from Google Fonts and unpkg.
-
-## How to use
-
-1. Press **START** on the home screen.
-2. Type a task, choose a category and a priority, then press **+** or Enter. You can add up to 7 tasks.
-3. Click a task to mark it as done. Click **×** to delete it.
-4. Press **FINISH DAY** to see your result. Pressing **BACK HOME** clears the task list so tomorrow starts fresh.
-
-## Project structure
-
-```
-index.html        Home screen
-dashboard.html    Task dashboard
-dashboard.js      Task logic: add, save, complete, delete, progress
-finishDay.html    Result screen
-finishDay.js      Result logic
-styles.css        All styling and the colour palette (see :root at the top)
-main.js           Electron window setup
-preload.js        Safe bridge between the window and the app
-assets/           Images used by the app
-```
-
-
-## Disclaimer
-
-This is an unofficial, non-commercial fan project. It is not affiliated with or endorsed by Koyoharu Gotouge, Shueisha, Aniplex or Ufotable. Demon Slayer: Kimetsu no Yaiba and its characters belong to their respective owners. The character images in `assets/` are not covered by this project's licence.
