@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Demon Slayer Tasks</title>
+</head>
+<body>
+    <div class="dashDiv">
+        <div class="top-section">
+            <div class="datetime">
+                <span id="day"></span>
+                <span id="number"></span>
+                <span id="month"></span>
+            </div>
+
+            <div class="right-section">
+                <div class="progression">
+                    <h3>Training Progress</h3>
+                    <progress id="progress-bar" value="0" max="100"></progress>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-task">
+            <input id="write-task" type="text" placeholder="Write your mission here..." maxlength="40">
+            <select id="task-category" aria-label="Category">
+                <option>Work</option>
+                <option>Study</option>
+                <option>Home</option>
+                <option>Health</option>
+                <option>Other</option>
+            </select>
+            <select id="task-priority" aria-label="Priority">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <button id="add-btn" aria-label="Add task">+</button>
+        </div>
+
+        <div class="bottom-section">
+            <ul id="task-list"></ul>
+            <p id="empty-msg">No missions yet. Add your first one above!</p>
+        </div>
+        <button id="finish-btn">FINISH DAY</button>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

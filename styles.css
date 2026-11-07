@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+/* Demon Slayer palette: Tanjiro's green & black checkered haori + Nezuko pink */
+:root {
+    --ink: #151515;
+    --haori-green: #2F6B4F;
+    --haori-dark: #1B1B1B;
+    --pink: #F7A8C4;
+    --pink-deep: #E0527F;
+    --cream: #FFF5F7;
+    --soft-border: #F3C6D6;
+    --shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: conic-gradient(var(--haori-dark) 25%, var(--haori-green) 0 50%, var(--haori-dark) 0 75%, var(--haori-green) 0) 0 0 / 70px 70px;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: var(--ink);
+}
+
+/*------ HOME PAGE ------*/
+
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title block (home + finish screens) */
+.title-block {
+    text-align: center;
+    padding: 16px 56px 14px;
+    margin-bottom: 22px;
+    background: linear-gradient(90deg, transparent, rgba(21, 21, 21, 0.88) 18%, rgba(21, 21, 21, 0.88) 82%, transparent);
+}
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--pink);
+    margin-bottom: 6px;
+}
+.title-block h1 {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 800;
+    font-size: 36px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cream);
+    text-shadow: 0 0 22px rgba(247, 168, 196, 0.45);
+}
+.divider {
+    display: block;
+    width: 120px;
+    height: 2px;
+    margin: 12px auto 0;
+    background: linear-gradient(90deg, transparent, var(--pink-deep), transparent);
+}
+
+.mainDiv .center-image {
+    width: 372px;
+    height: 357px;
+    border: 4px solid var(--pink);
+    border-radius: 25px;
+    background-color: var(--cream);
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.mainDiv .center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mainDiv .center-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 21px;
+}
+
+/* Shared pixel-style button */
+#start-btn,
+#finish-btn,
+#restart-btn {
+    font-family: 'Pixelify Sans';
+    font-size: 24px;
+    color: var(--ink);
+    background-color: var(--pink);
+    border: 4px solid var(--ink);
+    border-radius: 10px;
+    padding: 8px 24px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+#start-btn:hover,
+#finish-btn:hover,
+#restart-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--pink-deep);
+    color: var(--cream);
+}
+
+/*------ DASHBOARD ------*/
+
+.dashDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    padding: 24px;
+    gap: 14px;
+}
+
+.top-section {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.datetime {
+    width: 30%;
+    height: 100%;
+    background-color: var(--cream);
+    border: 4px solid var(--pink);
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#day {
+    font-size: 20px;
+    font-weight: 600;
+}
+#number {
+    font-size: 32px;
+    color: var(--cream);
+    background-color: var(--pink-deep);
+    padding: 6px 14px;
+    border-radius: 50px;
+}
+#month {
+    font-size: 16px;
+}
+
+.right-section {
+    width: 67%;
+    height: 100%;
+}
+
+.progression {
+    height: 100%;
+    background-color: var(--cream);
+    border: 4px solid var(--pink);
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.progression h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+#progress-bar {
+    appearance: none;
+    height: 18px;
+    width: 75%;
+    border-radius: 10px;
+}
+#progress-bar::-webkit-progress-bar {
+    background-color: var(--soft-border);
+    border: 2px solid var(--ink);
+    border-radius: 10px;
+}
+#progress-bar::-webkit-progress-value {
+    background-color: var(--pink-deep);
+    border-radius: 8px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Add-task row */
+.add-task {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+}
+.add-task input,
+.add-task select {
+    font-family: 'Pixelify Sans';
+    font-size: 15px;
+    outline: none;
+    border: 3px solid var(--pink);
+    background-color: var(--cream);
+    color: var(--ink);
+    padding: 10px 12px;
+    border-radius: 50px;
+}
+.add-task input {
+    flex: 1;
+    min-width: 0;
+}
+.add-task input:focus,
+.add-task select:focus {
+    border-color: var(--pink-deep);
+}
+.add-task select {
+    cursor: pointer;
+}
+#add-btn {
+    font-size: 24px;
+    line-height: 1;
+    color: var(--cream);
+    background-color: var(--ink);
+    border: 3px solid var(--pink);
+    padding: 6px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+#add-btn:hover {
+    background-color: var(--pink-deep);
+}
+
+/* Task list */
+.bottom-section {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    background-color: var(--cream);
+    border: 4px solid var(--pink);
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    padding: 14px 16px;
+}
+#task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.task {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.task .bx {
+    color: var(--pink-deep);
+    font-size: 20px;
+}
+.task-text {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+.task.done .task-text {
+    text-decoration: line-through;
+    color: #A58E96;
+}
+.task.done .bx {
+    color: #A58E96;
+}
+
+.tag {
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 50px;
+    border: 2px solid var(--ink);
+    white-space: nowrap;
+}
+.tag.category {
+    background-color: var(--haori-green);
+    color: var(--cream);
+}
+.tag.priority-high {
+    background-color: var(--pink-deep);
+    color: var(--cream);
+}
+.tag.priority-medium {
+    background-color: var(--pink);
+}
+.tag.priority-low {
+    background-color: var(--soft-border);
+    color: #6b5a60;
+}
+
+.delete-btn {
+    font-size: 20px;
+    line-height: 1;
+    background: none;
+    border: none;
+    color: var(--ink);
+    cursor: pointer;
+    padding: 0 4px;
+}
+.delete-btn:hover {
+    color: var(--pink-deep);
+}
+
+#empty-msg {
+    text-align: center;
+    color: #A58E96;
+    margin-top: 20px;
+}
+
+/*------ CONCLUSION ------*/
+
+.finalDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+}
+
+.finalDiv .center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 372px;
+    height: 357px;
+    border: 4px solid var(--pink);
+    border-radius: 25px;
+    background-color: var(--cream);
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.finalDiv .center-image {
+    overflow: hidden;
+}
+
+.finalDiv .center-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 21px;
+}
+
+#conclusion {
+    font-family: 'Shippori Mincho B1', serif;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: var(--cream);
+    margin-bottom: 16px;
+}
+
+[hidden] {
+    display: none !important;
+}
